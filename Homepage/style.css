@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  /* variables */
+  --bg-clr: #F2F9FE;
+  --text-clr: #223344;
+  --small-txt:#909193;
+  --emoji:black;
+  --about-us:#111729;
+/* css style */
+  background-color: var(--bg-clr);
+  padding: 0px 00px 0px 00px;
+}
+
+body.dark{
+  --bg-clr :#223344;
+  --text-clr: white;
+  --small-txt: white;
+  --emoji:white;
+  --about-us:white;
+  --img-drk:white;
+}
+
+/* Header css start */
+.nav-bar li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+a{
+  text-decoration:none;
+  color: #909193;
+}
+
+.active{
+  color: var(--about-us);
+}
+
+a:hover{
+  color: var(--about-us);
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10% 100px 110px;
+  margin: 0px;
+}
+
+li{
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+}/* header css end  */
+
+/* text section css start */
+.info :nth-child(1){
+    padding-bottom: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--emoji);
+}
+
+.info h1{
+    padding-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-clr);
+    font-weight: 550;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.info :nth-child(3){
+    padding-top: 32px;
+    padding-bottom: 22px;
+    color: var(--small-txt);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+/* text section css end */
+
+/* button and link css via GRID  start */
+.container {  
+    display: grid;
+    grid-template-columns: 0.13fr 0.13fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    gap: 40px 32px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4";
+  }
+
+.item1 { 
+    grid-area: item1;
+    color: white;
+    background-color: #2A4DD0;
+    border-radius: 15px;
+    border: none;
+    padding: 16px 10px 16px 10px;
+    width: 170px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 16px;
+    
+}
+
+  .item2 { 
+    grid-area: item2;
+    color: #2A4DD0;
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-underline-position: under;
+    padding-top: 12px;
+    width:150px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    
+}
+  .item3 {
+     grid-area: item3;
+     color: #909193;
+     font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 14px;
+  
+  }
+  .item4 { 
+    grid-area: item4;
+    color: #909193;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 14px;
+  }
+  .check{
+    padding-top: 2.5px;
+    width:200px;
+    text-indent: 10px;
+  }
+  /* check image  */
+  img{
+    float: left;
+}
+/* button and link css via GRID  end */
+
+/* big image css start */
+  .robot {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  .row{
+    padding: 0px 100px;
+    
+  }
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: block;
+    
+  }
+  .rob{
+    margin-left: 100px;
+    max-width: 700px;
+    max-height: 600px;
+    padding-left: 100px; 
+  }
+ /* big image css end */
+
+ /* light-dark mode toggle css start */
+  input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    width: 55px;
+    height: 30px;
+    border-radius: 50px;
+    outline: none;
+    background-image: url('btn2.png');
+    background-size: cover;
+}
+
+input[type="checkbox"]::before{
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  padding: 2px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  background-image: url('Moon_fill.svg');
+  background-size: cover;
+  border-radius: 50px;
+}
+
+input[type="checkbox"]:checked:before{
+  transform: translate(100%);
+  background-image: url('Sun_fill.svg')
+}
+
+input[type="checkbox"]:checked{
+  background-color: BLACK;
+}
+/* light-dark mode toggle css start */
